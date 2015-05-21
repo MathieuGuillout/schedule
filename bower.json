@@ -1,7 +1,7 @@
 {
   "name": "tiny-schedule",
   "main": "index.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://github.com/MathieuGuillout/tiny-schedule",
   "authors": [
     "MathieuGuillout <mathieu@creativelicence.com.au>"
@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "bit-state": "1.0.4"
+    "bit-state": "1.0.6"
   }
 }
