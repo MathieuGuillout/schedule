@@ -1,6 +1,6 @@
 bitState = require 'bit-state'
 
-module.exports = (method) ->
+schedule = (method) ->
   dictUnitSeconds = { seconds: 1, minutes: 60, hours: 3600 }
   shouldRun       = bitState()
 
@@ -21,3 +21,11 @@ module.exports = (method) ->
   pause: chain(shouldRun.no)
   resume: chain(shouldRun.yes)
   every: chain(every)
+
+if exports?
+  if module?.exports?
+    exports = module.exports = schedule
+  exports.schedule = schedule
+else
+  root.schedule = schedule
+
