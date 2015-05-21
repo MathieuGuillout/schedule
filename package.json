@@ -17,5 +17,10 @@
   "license": "ISC",
   "dependencies": {
     "bit-state": "^1.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/MathieuGuillout/schedule/issues"
+  },
+  "homepage": "https://github.com/MathieuGuillout/schedule",
+  "devDependencies": {}
 }
