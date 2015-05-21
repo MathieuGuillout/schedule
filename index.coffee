@@ -27,5 +27,5 @@ if exports?
     exports = module.exports = schedule
   exports.schedule = schedule
 else
-  root.schedule = schedule
+  this.schedule = schedule
 
