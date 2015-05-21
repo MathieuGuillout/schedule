@@ -1,0 +1,15 @@
+{
+  "name": "bit-state",
+  "homepage": "https://github.com/MathieuGuillout/bit-state",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "26c94ce250e159bff73d21da7feee1feeb1bf16a"
+  },
+  "_source": "git://github.com/MathieuGuillout/bit-state.git",
+  "_target": "~1.0.0",
+  "_originalSource": "bit-state",
+  "_direct": true
+}
