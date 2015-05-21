@@ -1,5 +1,5 @@
 {
-  "name": "schedule",
+  "name": "tiny-schedule",
   "version": "1.0.0",
   "description": "JS scheduling module",
   "main": "index.js",
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:MathieuGuillout/schedule.git"
+    "url": "git@github.com:MathieuGuillout/tiny-schedule.git"
   },
   "keywords": [
     "schedule"
   ],
-  "author": "mattam",
   "license": "ISC",
   "dependencies": {
     "bit-state": "^1.0.0"
   },
+  "author": "mattam",
   "bugs": {
-    "url": "https://github.com/MathieuGuillout/schedule/issues"
+    "url": "https://github.com/MathieuGuillout/tiny-schedule/issues"
   },
-  "homepage": "https://github.com/MathieuGuillout/schedule",
+  "homepage": "https://github.com/MathieuGuillout/tiny-schedule",
   "devDependencies": {}
 }
