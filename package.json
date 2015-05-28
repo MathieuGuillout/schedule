@@ -1,6 +1,6 @@
 {
   "name": "tiny-schedule",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "Tiny JS scheduling module",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "bit-state": "1.0.x"
+    "bit-state": ">=1.0.7"
   },
   "author": "mattam",
   "bugs": {

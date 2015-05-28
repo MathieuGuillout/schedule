@@ -26,10 +26,5 @@ schedule = (method) ->
   resume: chain(shouldRun.yes)
   every: chain(every)
 
-if exports?
-  if module?.exports?
-    exports = module.exports = schedule
-  exports.schedule = schedule
-else
-  this.schedule = schedule
+module.exports = schedule
 
