@@ -12,19 +12,22 @@ schedule = (method) ->
     [ nb, unit ] = convertToNumberAndUnits(strInterval)
     +nb * 1000 * dictUnitSeconds[unit]
 
-  repeat = (strInterval) ->
-    if shouldRun.is(true) and isRunning.is(false)
-      isRunning.start()
-      method isRunning.stop
+  run = ->
+    isRunning.start()
+    method isRunning.stop
 
+  repeat = (strInterval) ->
+    run() if shouldRun.is(true) and isRunning.is(false)
     every(strInterval)
 
   every = (str) -> setTimeout (-> repeat str), convertToMs str
+
   chain = (method) -> (args...) -> method(args...); @
 
   pause: chain(shouldRun.no)
   resume: chain(shouldRun.yes)
   every: chain(every)
+  run: chain(run)
 
 module.exports = schedule
 

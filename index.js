@@ -5,7 +5,7 @@ var bitState, schedule,
 bitState = require('bit-state');
 
 schedule = function(method) {
-  var chain, convertToMs, convertToNumberAndUnits, dictUnitSeconds, every, isRunning, repeat, shouldRun;
+  var chain, convertToMs, convertToNumberAndUnits, dictUnitSeconds, every, isRunning, repeat, run, shouldRun;
   dictUnitSeconds = {
     seconds: 1,
     minutes: 60,
@@ -25,10 +25,13 @@ schedule = function(method) {
     _ref = convertToNumberAndUnits(strInterval), nb = _ref[0], unit = _ref[1];
     return +nb * 1000 * dictUnitSeconds[unit];
   };
+  run = function() {
+    isRunning.start();
+    return method(isRunning.stop);
+  };
   repeat = function(strInterval) {
     if (shouldRun.is(true) && isRunning.is(false)) {
-      isRunning.start();
-      method(isRunning.stop);
+      run();
     }
     return every(strInterval);
   };
@@ -48,7 +51,8 @@ schedule = function(method) {
   return {
     pause: chain(shouldRun.no),
     resume: chain(shouldRun.yes),
-    every: chain(every)
+    every: chain(every),
+    run: chain(run)
   };
 };
 
